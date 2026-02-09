@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner | Bookings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Owner</small>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+            alt="Owner"
+          />
+          <div>
+            <h6 class="mb-0">John Doe</h6>
+            <small>Hostel Owner</small>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a href="owner.html">Dashboard</a>
+          <a href="owner-my-hostels.html">My Hostels</a>
+          <a class="active" href="owner-bookings.html">Bookings</a>
+          <a href="owner-tenants.html">Tenants</a>
+          <a href="owner-payments.html">Payments</a>
+          <a href="owner-complaints.html">Complaints</a>
+          <a href="owner-reports.html">Reports</a>
+          <a href="owner-settings.html">Settings</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+        <button class="btn btn-success w-100">Add New Hostel</button>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Reservation tracking</p>
+            <h2 class="fw-bold">Bookings</h2>
+            <p class="text-muted">Monitor booking requests and confirmations.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">JD</div>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Booking Summary</h5>
+              <button class="btn btn-outline-primary btn-sm">Export</button>
+            </div>
+            <div class="overview-metrics">
+              <div>
+                <h4>65</h4>
+                <p>Bookings This Month</p>
+              </div>
+              <div>
+                <h4>12</h4>
+                <p>Pending Requests</p>
+              </div>
+              <div>
+                <h4>5</h4>
+                <p>Cancellations</p>
+              </div>
+              <div>
+                <h4>4.7</h4>
+                <p>Avg Rating</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Upcoming Check-ins</h5>
+              <button class="btn btn-outline-primary btn-sm">Send Reminders</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Ayesha Khan</strong>
+                  <p class="text-muted mb-0">Suite A4 · May 12</p>
+                </div>
+                <span class="badge bg-success-subtle text-success">Confirmed</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Hamza Aziz</strong>
+                  <p class="text-muted mb-0">Suite B2 · May 14</p>
+                </div>
+                <span class="badge bg-warning-subtle text-warning">Pending</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h5>Booking Requests</h5>
+            <button class="btn btn-primary btn-sm">Add Booking</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Room</th>
+                  <th>Check-In</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Rohan S.</td>
+                  <td>Suite C1</td>
+                  <td>May 18, 2024</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Approve</button></td>
+                </tr>
+                <tr>
+                  <td>Fatima Noor</td>
+                  <td>Suite A2</td>
+                  <td>May 20, 2024</td>
+                  <td><span class="badge bg-success-subtle text-success">Confirmed</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                </tr>
+                <tr>
+                  <td>Ali Khan</td>
+                  <td>Suite B4</td>
+                  <td>May 22, 2024</td>
+                  <td><span class="badge bg-danger-subtle text-danger">Cancelled</span></td>
+                  <td><button class="btn btn-sm btn-outline-danger">Archive</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner | My Hostels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Owner</small>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+            alt="Owner"
+          />
+          <div>
+            <h6 class="mb-0">John Doe</h6>
+            <small>Hostel Owner</small>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a href="owner.html">Dashboard</a>
+          <a class="active" href="owner-my-hostels.html">My Hostels</a>
+          <a href="owner-bookings.html">Bookings</a>
+          <a href="owner-tenants.html">Tenants</a>
+          <a href="owner-payments.html">Payments</a>
+          <a href="owner-complaints.html">Complaints</a>
+          <a href="owner-reports.html">Reports</a>
+          <a href="owner-settings.html">Settings</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+        <button class="btn btn-success w-100">Add New Hostel</button>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Portfolio overview</p>
+            <h2 class="fw-bold">My Hostels</h2>
+            <p class="text-muted">Manage listings, availability, and pricing from one place.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">JD</div>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Hostel Performance</h5>
+              <button class="btn btn-outline-primary btn-sm">Export</button>
+            </div>
+            <div class="overview-metrics">
+              <div>
+                <h4>3</h4>
+                <p>Total Hostels</p>
+              </div>
+              <div>
+                <h4>92%</h4>
+                <p>Occupancy Rate</p>
+              </div>
+              <div>
+                <h4>14</h4>
+                <p>Available Beds</p>
+              </div>
+              <div>
+                <h4>4.8</h4>
+                <p>Avg Rating</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Next Tasks</h5>
+              <button class="btn btn-outline-primary btn-sm">Add Task</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Upload new room photos</span>
+                <span class="badge bg-info-subtle text-info">Today</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Review booking requests</span>
+                <span class="badge bg-warning-subtle text-warning">3 pending</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h5>Hostel Listings</h5>
+            <button class="btn btn-primary btn-sm">Add Listing</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Hostel</th>
+                  <th>City</th>
+                  <th>Occupancy</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Greenview Hostel</td>
+                  <td>Islamabad</td>
+                  <td>92%</td>
+                  <td><span class="badge bg-success-subtle text-success">Active</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>Sunrise PG</td>
+                  <td>Lahore</td>
+                  <td>84%</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Needs Review</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Update</button></td>
+                </tr>
+                <tr>
+                  <td>City Stay Hostel</td>
+                  <td>Karachi</td>
+                  <td>78%</td>
+                  <td><span class="badge bg-info-subtle text-info">Seasonal</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

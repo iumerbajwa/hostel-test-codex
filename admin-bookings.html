@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Bookings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Admin</small>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+            alt="Admin"
+          />
+          <div>
+            <h6 class="mb-0">Admin</h6>
+            <small>Super Admin</small>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a href="admin.html">Dashboard</a>
+          <a href="admin-hostels.html">Hostels</a>
+          <a href="admin-owners.html">Owners</a>
+          <a href="admin-students.html">Students</a>
+          <a class="active" href="admin-bookings.html">Bookings</a>
+          <a href="admin-payments.html">Payments</a>
+          <a href="admin-complaints.html">Complaints</a>
+          <a href="admin-reports.html">Reports</a>
+          <a href="#">Settings</a>
+          <a href="owner.html">Owner Panel</a>
+        </nav>
+        <button class="btn btn-primary w-100">Settings</button>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Reservations overview</p>
+            <h2 class="fw-bold">Bookings</h2>
+            <p class="text-muted">Track occupancy, cancellations, and booking sources.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">AD</div>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Booking KPIs</h5>
+              <button class="btn btn-outline-primary btn-sm">Export</button>
+            </div>
+            <div class="overview-metrics">
+              <div>
+                <h4>14,230</h4>
+                <p>Total Bookings</p>
+              </div>
+              <div>
+                <h4>92%</h4>
+                <p>Occupancy Rate</p>
+              </div>
+              <div>
+                <h4>216</h4>
+                <p>Cancellations</p>
+              </div>
+              <div>
+                <h4>4.6</h4>
+                <p>Avg Stay Rating</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Booking Channels</h5>
+              <button class="btn btn-outline-primary btn-sm">View Report</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Online Booking</span>
+                <strong>72%</strong>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Owner Assisted</span>
+                <strong>18%</strong>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Walk-in</span>
+                <strong>10%</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h5>Latest Bookings</h5>
+            <button class="btn btn-primary btn-sm">Create Booking</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Student</th>
+                  <th>Hostel</th>
+                  <th>Check-in</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ayesha Khan</td>
+                  <td>Greenview Hostel</td>
+                  <td>May 12, 2024</td>
+                  <td><span class="badge bg-success-subtle text-success">Confirmed</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                </tr>
+                <tr>
+                  <td>Hamza Aziz</td>
+                  <td>Sunrise PG</td>
+                  <td>May 14, 2024</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Review</button></td>
+                </tr>
+                <tr>
+                  <td>Rohan S.</td>
+                  <td>City Stay Hostel</td>
+                  <td>May 15, 2024</td>
+                  <td><span class="badge bg-danger-subtle text-danger">Cancelled</span></td>
+                  <td><button class="btn btn-sm btn-outline-danger">Resolve</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
