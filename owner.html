@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owner Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar glass">
+      <div>
+        <h5 class="fw-bold">Command Center</h5>
+        <p class="text-muted small">Owner Dashboard</p>
+      </div>
+      <nav class="nav flex-column gap-2">
+        <a class="nav-link active" href="#">Overview</a>
+        <a class="nav-link" href="#">Residents</a>
+        <a class="nav-link" href="#">Finance</a>
+        <a class="nav-link" href="admin.html">Admin Panel</a>
+      </nav>
+      <button class="btn btn-indigo mt-auto" data-bs-toggle="modal" data-bs-target="#manualEntryModal">
+        Manual Entry
+      </button>
+    </aside>
+
+    <main class="main-content">
+      <header class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <p class="text-muted mb-1">Welcome back, Owner</p>
+          <h2 class="fw-bold">Live Operations</h2>
+        </div>
+        <div class="glass px-4 py-3 rounded-4">
+          <span class="text-muted small">Live sync:</span>
+          <strong class="ms-2">Connected</strong>
+        </div>
+      </header>
+
+      <section class="bento-grid mb-4">
+        <div class="bento-card stat-card">
+          <span>Total Revenue</span>
+          <h3 class="fw-bold">PKR 8.2M</h3>
+          <small class="text-muted">+12% this month</small>
+        </div>
+        <div class="bento-card stat-card">
+          <span>Pending Tickets</span>
+          <h3 class="fw-bold">14</h3>
+          <small class="text-muted">Maintenance & support</small>
+        </div>
+        <div class="bento-card stat-card">
+          <span>New Applications</span>
+          <h3 class="fw-bold">23</h3>
+          <small class="text-muted">Last 24 hours</small>
+        </div>
+      </section>
+
+      <section class="bento-grid">
+        <div class="bento-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Live Occupancy Grid</h5>
+            <span class="text-muted small">72% occupied</span>
+          </div>
+          <div class="room-grid">
+            <div class="room occupied">A1</div>
+            <div class="room occupied">A2</div>
+            <div class="room">A3</div>
+            <div class="room occupied">A4</div>
+            <div class="room">A5</div>
+            <div class="room occupied">A6</div>
+            <div class="room occupied">B1</div>
+            <div class="room">B2</div>
+            <div class="room occupied">B3</div>
+            <div class="room">B4</div>
+            <div class="room occupied">B5</div>
+            <div class="room">B6</div>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Hybrid Resident Table</h5>
+            <button class="btn btn-sm btn-indigo">Export</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Room</th>
+                  <th>Source</th>
+                  <th>Invoice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fatima Noor</td>
+                  <td>Suite A4</td>
+                  <td>
+                    <span class="d-inline-flex align-items-center gap-2">
+                      <span class="text-muted">🌐</span> Online
+                    </span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1001">
+                      Download PDF
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Hamza Aziz</td>
+                  <td>Suite B1</td>
+                  <td>
+                    <span class="d-inline-flex align-items-center gap-2">
+                      <span class="text-muted">👤</span> Manual
+                    </span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1002">
+                      Download PDF
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Aisha Tariq</td>
+                  <td>Suite A1</td>
+                  <td>
+                    <span class="d-inline-flex align-items-center gap-2">
+                      <span class="text-muted">🌐</span> Online
+                    </span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1003">
+                      Download PDF
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="modal fade"
+      id="manualEntryModal"
+      tabindex="-1"
+      aria-labelledby="manualEntryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content glass p-3">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="manualEntryModalLabel">Manual Entry Wizard</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-step active" data-step="1">
+              <h6 class="fw-semibold">Student Details</h6>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input class="form-control" type="text" name="fullName" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Contact</label>
+                  <input class="form-control" type="text" name="contact" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Program</label>
+                  <input class="form-control" type="text" name="program" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-step" data-step="2">
+              <h6 class="fw-semibold">Room Assignment</h6>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label class="form-label">Room</label>
+                  <select class="form-select" name="room">
+                    <option>Suite A3</option>
+                    <option>Suite B2</option>
+                    <option>Suite C1</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Move-in Date</label>
+                  <input class="form-control" type="date" name="moveIn" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-step" data-step="3">
+              <h6 class="fw-semibold">Payment Summary</h6>
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label class="form-label">Monthly Rent</label>
+                  <input class="form-control" type="number" name="rent" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Deposit</label>
+                  <input class="form-control" type="number" name="deposit" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Notes</label>
+                  <textarea class="form-control" name="notes" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0 d-flex justify-content-between">
+            <button class="btn btn-outline-secondary" id="prevStep">Back</button>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary" id="nextStep">Next</button>
+              <button class="btn btn-indigo d-none" id="submitEntry">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

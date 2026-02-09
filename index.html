@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seeker Marketplace | Hostel SaaS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar glass m-3 rounded-4 px-4 py-3">
+      <div class="container-fluid">
+        <span class="navbar-brand fw-semibold">Hostel Nexus</span>
+        <div class="d-flex gap-3 align-items-center">
+          <a class="text-decoration-none text-muted" href="owner.html">Owner Console</a>
+          <button class="btn btn-indigo">Sign In</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container marketplace-hero">
+      <div class="text-center">
+        <p class="text-muted">Find trusted hostels near your university</p>
+        <h1 class="fw-bold">Discover verified rooms in minutes</h1>
+      </div>
+      <div class="search-bar glass">
+        <div>
+          <label class="form-label text-muted" for="universityInput">University</label>
+          <input
+            id="universityInput"
+            class="form-control"
+            type="text"
+            placeholder="FAST-ISB, NUST, or COMSATS"
+          />
+        </div>
+        <div>
+          <label class="form-label text-muted" for="distanceRange">Distance (km)</label>
+          <input
+            id="distanceRange"
+            class="form-range"
+            type="range"
+            min="0"
+            max="5"
+            step="0.5"
+            value="2"
+          />
+          <div class="text-muted small">Up to <span id="distanceValue">2</span> km</div>
+        </div>
+        <button id="searchBtn" class="btn btn-indigo">Search</button>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <div class="row g-4" id="hostelResults">
+        <div class="col-md-4">
+          <div class="hostel-card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Hostel exterior" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Zenith Residences</h5>
+                <span class="badge-verified">Verified</span>
+              </div>
+              <p class="text-muted mt-2 mb-0">Smart rooms with biometric entry and shared work pods.</p>
+            </div>
+            <div class="card-footer">0.8km from FAST-ISB</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="hostel-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Interior" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Aurora House</h5>
+                <span class="badge-verified">Verified</span>
+              </div>
+              <p class="text-muted mt-2 mb-0">Calm, minimalist rooms with 24/7 security and meals.</p>
+            </div>
+            <div class="card-footer">1.4km from NUST</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="hostel-card">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Hostel room" />
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Nova Suites</h5>
+                <span class="badge-verified">Verified</span>
+              </div>
+              <p class="text-muted mt-2 mb-0">High-speed WiFi, study lounges, and flexible contracts.</p>
+            </div>
+            <div class="card-footer">0.5km from COMSATS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
