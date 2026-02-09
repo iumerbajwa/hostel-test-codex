@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Hostel | HFMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="site-body">
+    <nav class="navbar navbar-expand-lg hfms-nav">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-mark">H</span>
+          <span class="fw-bold">HFMS</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#hfmsNav"
+          aria-controls="hfmsNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="hfmsNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="hostel-listing.html">Find Hostel</a></li>
+            <li class="nav-item"><a class="nav-link" href="list-your-hostel.html">List Your Hostel</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3">
+          <div>
+            <p class="text-muted mb-1">Browse verified hostels near your campus</p>
+            <h1 class="fw-bold">Find Hostel</h1>
+          </div>
+          <button class="btn btn-outline-primary">Save Search</button>
+        </div>
+        <div class="filter-bar">
+          <div class="filter-pill">
+            <span class="filter-label">City</span>
+            <select class="form-select form-select-sm border-0">
+              <option>Islamabad</option>
+              <option>Lahore</option>
+              <option>Karachi</option>
+            </select>
+          </div>
+          <div class="filter-pill">
+            <span class="filter-label">Budget</span>
+            <select class="form-select form-select-sm border-0">
+              <option>PKR 10k - 20k</option>
+              <option>PKR 20k - 30k</option>
+              <option>PKR 30k - 50k</option>
+            </select>
+          </div>
+          <div class="filter-pill">
+            <span class="filter-label">Gender</span>
+            <select class="form-select form-select-sm border-0">
+              <option>Any</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <button class="btn btn-success px-4">Apply</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
+              alt="Greenview Hostel"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>Greenview Hostel</h5>
+                <span class="badge bg-success-subtle text-success">Verified</span>
+              </div>
+              <p class="text-muted">G-11, Islamabad · 0.8km from NUST</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 5,000 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"
+              alt="Sunrise PG"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>Sunrise PG</h5>
+                <span class="badge bg-success-subtle text-success">Verified</span>
+              </div>
+              <p class="text-muted">E-11, Islamabad · 1.2km from FAST</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 6,500 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=800&q=80"
+              alt="City Stay Hostel"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>City Stay Hostel</h5>
+                <span class="badge bg-warning-subtle text-warning">New</span>
+              </div>
+              <p class="text-muted">F-10, Islamabad · 2.1km from COMSATS</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 4,800 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80"
+              alt="Nova Residency"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>Nova Residency</h5>
+                <span class="badge bg-success-subtle text-success">Verified</span>
+              </div>
+              <p class="text-muted">Blue Area · 0.6km from Bahria</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 7,200 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?auto=format&fit=crop&w=800&q=80"
+              alt="Harbor House"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>Harbor House</h5>
+                <span class="badge bg-success-subtle text-success">Verified</span>
+              </div>
+              <p class="text-muted">G-9, Islamabad · 1.7km from IIUI</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 5,600 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="listing-card">
+            <img
+              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
+              alt="Campus View"
+            />
+            <div class="listing-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5>Campus View</h5>
+                <span class="badge bg-info-subtle text-info">Popular</span>
+              </div>
+              <p class="text-muted">I-8, Islamabad · 1.0km from NDU</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <strong>₹ 6,100 / month</strong>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

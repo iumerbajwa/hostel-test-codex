@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hostel Details | HFMS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="site-body">
+    <nav class="navbar navbar-expand-lg hfms-nav">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="brand-mark">H</span>
+          <span class="fw-bold">HFMS</span>
+        </a>
+        <div class="ms-auto">
+          <a class="btn btn-outline-primary" href="hostel-listing.html">Back to Listings</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container section">
+      <div class="detail-hero">
+        <img
+          src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
+          alt="Greenview Hostel"
+        />
+        <div class="detail-summary">
+          <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+            <div>
+              <h1 class="fw-bold">Greenview Hostel</h1>
+              <p class="text-muted">G-11, Islamabad · 0.8km from NUST</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-success-subtle text-success">Verified</span>
+                <span class="badge bg-info-subtle text-info">4.8 Rating</span>
+                <span class="badge bg-primary-subtle text-primary">Boys Hostel</span>
+              </div>
+            </div>
+            <div class="detail-price">
+              <h3>₹ 5,000 / month</h3>
+              <button class="btn btn-success w-100">Book Visit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-lg-8">
+          <div class="detail-card">
+            <h5>About this Hostel</h5>
+            <p class="text-muted">
+              Greenview Hostel provides modern rooms, biometric access, and shared study lounges. Meals are served
+              three times a day with flexible accommodation plans for students.
+            </p>
+            <div class="amenities-grid">
+              <span>✅ High-speed WiFi</span>
+              <span>✅ 24/7 Security</span>
+              <span>✅ Laundry Service</span>
+              <span>✅ Power Backup</span>
+              <span>✅ Study Room</span>
+              <span>✅ CCTV Monitoring</span>
+            </div>
+          </div>
+
+          <div class="detail-card mt-4">
+            <h5>Room Types</h5>
+            <div class="room-type">
+              <div>
+                <strong>Shared Room (2 persons)</strong>
+                <p class="text-muted mb-0">Attached washroom, AC, cupboards.</p>
+              </div>
+              <span class="fw-semibold">₹ 5,000 / month</span>
+            </div>
+            <div class="room-type">
+              <div>
+                <strong>Private Room</strong>
+                <p class="text-muted mb-0">Study desk, balcony, high-speed internet.</p>
+              </div>
+              <span class="fw-semibold">₹ 8,500 / month</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="detail-card">
+            <h5>Owner Details</h5>
+            <div class="owner-profile">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+                alt="Owner"
+              />
+              <div>
+                <strong>John Doe</strong>
+                <p class="text-muted mb-0">Superhost · 6 properties</p>
+              </div>
+            </div>
+            <button class="btn btn-outline-primary w-100 mt-3">Message Owner</button>
+          </div>
+          <div class="detail-card mt-4">
+            <h5>Location</h5>
+            <p class="text-muted">Near Kashmir Highway, G-11 Islamabad.</p>
+            <div class="map-placeholder">Map Preview</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

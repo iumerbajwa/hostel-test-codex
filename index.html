@@ -37,12 +37,18 @@
           </button>
           <div class="collapse navbar-collapse" id="hfmsNav">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
-              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#featured-hostels">Find Hostel</a></li>
-              <li class="nav-item"><a class="nav-link" href="owner.html">List Your Hostel</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="hostel-listing.html">Find Hostel</a></li>
+              <li class="nav-item"><a class="nav-link" href="list-your-hostel.html">List Your Hostel</a></li>
               <li class="nav-item">
-                <a class="btn btn-success rounded-pill px-4" href="#">Sign Up</a>
+                <button class="nav-link btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Login
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-success rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#signupModal">
+                  Sign Up
+                </button>
               </li>
             </ul>
           </div>
@@ -60,8 +66,8 @@
                 dashboard designed for students.
               </p>
               <div class="d-flex flex-wrap gap-3">
-                <button class="btn btn-primary btn-lg px-4">Find a Hostel</button>
-                <button class="btn btn-outline-success btn-lg px-4">List Your Hostel</button>
+                <a class="btn btn-primary btn-lg px-4" href="hostel-listing.html">Find a Hostel</a>
+                <a class="btn btn-outline-success btn-lg px-4" href="list-your-hostel.html">List Your Hostel</a>
               </div>
             </div>
             <div class="col-lg-6">
@@ -99,7 +105,7 @@
                 <option>Female</option>
               </select>
             </div>
-            <button class="btn btn-success px-4">Search</button>
+            <a class="btn btn-success px-4" href="hostel-listing.html">Search</a>
           </div>
 
           <div class="stats-row">
@@ -162,7 +168,7 @@
     <section class="container section" id="featured-hostels">
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
         <h2 class="section-title mb-0">Featured Hostel for Owners</h2>
-        <button class="btn btn-outline-primary">See All Hostels</button>
+        <a class="btn btn-outline-primary" href="hostel-listing.html">See All Hostels</a>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
@@ -176,7 +182,7 @@
               <p>Delhi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <strong>₹ 5,000 / month</strong>
-                <button class="btn btn-sm btn-primary">View Details</button>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
               </div>
             </div>
           </article>
@@ -192,7 +198,7 @@
               <p>Bangalore</p>
               <div class="d-flex justify-content-between align-items-center">
                 <strong>₹ 6,500 / month</strong>
-                <button class="btn btn-sm btn-primary">View Details</button>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
               </div>
             </div>
           </article>
@@ -208,7 +214,7 @@
               <p>Mumbai</p>
               <div class="d-flex justify-content-between align-items-center">
                 <strong>₹ 4,800 / month</strong>
-                <button class="btn btn-sm btn-primary">View Details</button>
+                <a class="btn btn-sm btn-primary" href="hostel-detail.html">View Details</a>
               </div>
             </div>
           </article>
@@ -282,6 +288,59 @@
         <span class="text-muted">265 Rooms Available Today</span>
       </div>
     </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Welcome Back</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" placeholder="name@email.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input class="form-control" type="password" placeholder="••••••••" />
+            </div>
+            <button class="btn btn-primary w-100">Login</button>
+            <p class="text-muted small mt-3 text-center">By logging in you agree to HFMS terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create an Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input class="form-control" type="text" placeholder="Ayesha Khan" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" placeholder="name@email.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Account Type</label>
+              <select class="form-select">
+                <option>Student</option>
+                <option>Hostel Owner</option>
+              </select>
+            </div>
+            <button class="btn btn-success w-100">Create Account</button>
+            <p class="text-muted small mt-3 text-center">Already have an account? Use Login.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>

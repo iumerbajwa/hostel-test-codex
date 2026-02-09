@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Complaints</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Admin</small>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+            alt="Admin"
+          />
+          <div>
+            <h6 class="mb-0">Admin</h6>
+            <small>Super Admin</small>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a href="admin.html">Dashboard</a>
+          <a href="admin-hostels.html">Hostels</a>
+          <a href="admin-owners.html">Owners</a>
+          <a href="admin-students.html">Students</a>
+          <a href="admin-bookings.html">Bookings</a>
+          <a href="admin-payments.html">Payments</a>
+          <a class="active" href="admin-complaints.html">Complaints</a>
+          <a href="admin-reports.html">Reports</a>
+          <a href="#">Settings</a>
+          <a href="owner.html">Owner Panel</a>
+        </nav>
+        <button class="btn btn-primary w-100">Settings</button>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Issue resolution</p>
+            <h2 class="fw-bold">Complaints</h2>
+            <p class="text-muted">Track complaint resolution timelines and severity.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">AD</div>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Complaint Metrics</h5>
+              <button class="btn btn-outline-primary btn-sm">Export</button>
+            </div>
+            <div class="overview-metrics">
+              <div>
+                <h4>530</h4>
+                <p>Total Complaints</p>
+              </div>
+              <div>
+                <h4>46</h4>
+                <p>Open Cases</p>
+              </div>
+              <div>
+                <h4>4.2 days</h4>
+                <p>Avg Resolution</p>
+              </div>
+              <div>
+                <h4>92%</h4>
+                <p>Satisfaction</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>High Priority</h5>
+              <button class="btn btn-outline-primary btn-sm">Assign</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Noise Issue - Sunrise PG</strong>
+                  <p class="text-muted mb-0">Reported by: Ayesha Khan</p>
+                </div>
+                <span class="badge bg-danger-subtle text-danger">High</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Billing Dispute - City Stay</strong>
+                  <p class="text-muted mb-0">Reported by: Hamza Aziz</p>
+                </div>
+                <span class="badge bg-warning-subtle text-warning">Medium</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h5>Complaint Log</h5>
+            <button class="btn btn-primary btn-sm">Create Case</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>Hostel</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Room hygiene</td>
+                  <td>Greenview Hostel</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Medium</span></td>
+                  <td><span class="badge bg-success-subtle text-success">Resolved</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Details</button></td>
+                </tr>
+                <tr>
+                  <td>Electricity outage</td>
+                  <td>Sunrise PG</td>
+                  <td><span class="badge bg-danger-subtle text-danger">High</span></td>
+                  <td><span class="badge bg-warning-subtle text-warning">In Progress</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Update</button></td>
+                </tr>
+                <tr>
+                  <td>Noise complaint</td>
+                  <td>City Stay</td>
+                  <td><span class="badge bg-info-subtle text-info">Low</span></td>
+                  <td><span class="badge bg-success-subtle text-success">Resolved</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

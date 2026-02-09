@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Admin</small>
+          </div>
+        </div>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+            alt="Admin"
+          />
+          <div>
+            <h6 class="mb-0">Admin</h6>
+            <small>Super Admin</small>
+          </div>
+        </div>
+        <nav class="dash-nav">
+          <a href="admin.html">Dashboard</a>
+          <a href="admin-hostels.html">Hostels</a>
+          <a href="admin-owners.html">Owners</a>
+          <a href="admin-students.html">Students</a>
+          <a href="admin-bookings.html">Bookings</a>
+          <a class="active" href="admin-payments.html">Payments</a>
+          <a href="admin-complaints.html">Complaints</a>
+          <a href="admin-reports.html">Reports</a>
+          <a href="#">Settings</a>
+          <a href="owner.html">Owner Panel</a>
+        </nav>
+        <button class="btn btn-primary w-100">Settings</button>
+      </aside>
+
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Revenue operations</p>
+            <h2 class="fw-bold">Payments</h2>
+            <p class="text-muted">Track payouts, refunds, and payment failures.</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">AD</div>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Payment Summary</h5>
+              <button class="btn btn-outline-primary btn-sm">Export</button>
+            </div>
+            <div class="overview-metrics">
+              <div>
+                <h4>₹ 77.3 L</h4>
+                <p>Total Revenue</p>
+              </div>
+              <div>
+                <h4>₹ 2.1 L</h4>
+                <p>Pending Payouts</p>
+              </div>
+              <div>
+                <h4>₹ 0.4 L</h4>
+                <p>Refunds</p>
+              </div>
+              <div>
+                <h4>1.8%</h4>
+                <p>Payment Failures</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Recent Payouts</h5>
+              <button class="btn btn-outline-primary btn-sm">Review</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Greenview Hostel</strong>
+                  <p class="text-muted mb-0">Payout scheduled</p>
+                </div>
+                <span class="badge bg-info-subtle text-info">₹ 1.2 L</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <strong>Sunrise PG</strong>
+                  <p class="text-muted mb-0">Processing</p>
+                </div>
+                <span class="badge bg-info-subtle text-info">₹ 0.9 L</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h5>Recent Transactions</h5>
+            <button class="btn btn-primary btn-sm">Initiate Refund</button>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th>Transaction</th>
+                  <th>Student</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#TX-1024</td>
+                  <td>Ayesha Khan</td>
+                  <td>₹ 18,400</td>
+                  <td><span class="badge bg-success-subtle text-success">Paid</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Receipt</button></td>
+                </tr>
+                <tr>
+                  <td>#TX-1025</td>
+                  <td>Hamza Aziz</td>
+                  <td>₹ 15,600</td>
+                  <td><span class="badge bg-warning-subtle text-warning">Pending</span></td>
+                  <td><button class="btn btn-sm btn-outline-primary">Follow Up</button></td>
+                </tr>
+                <tr>
+                  <td>#TX-1026</td>
+                  <td>Fatima Noor</td>
+                  <td>₹ 22,100</td>
+                  <td><span class="badge bg-danger-subtle text-danger">Failed</span></td>
+                  <td><button class="btn btn-sm btn-outline-danger">Resolve</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
