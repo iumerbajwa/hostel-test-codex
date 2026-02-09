@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seeker Marketplace | Hostel SaaS</title>
+    <title>HFMS | Hostel Finder & Management</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,93 +16,274 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <nav class="navbar glass m-3 rounded-4 px-4 py-3">
-      <div class="container-fluid">
-        <span class="navbar-brand fw-semibold">Hostel Nexus</span>
-        <div class="d-flex gap-3 align-items-center">
-          <a class="text-decoration-none text-muted" href="owner.html">Owner Console</a>
-          <button class="btn btn-indigo">Sign In</button>
+  <body class="site-body">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg hfms-nav">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="brand-mark">H</span>
+            <span class="fw-bold">HFMS</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hfmsNav"
+            aria-controls="hfmsNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="hfmsNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#featured-hostels">Find Hostel</a></li>
+              <li class="nav-item"><a class="nav-link" href="owner.html">List Your Hostel</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+              <li class="nav-item">
+                <a class="btn btn-success rounded-pill px-4" href="#">Sign Up</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <section class="container marketplace-hero">
-      <div class="text-center">
-        <p class="text-muted">Find trusted hostels near your university</p>
-        <h1 class="fw-bold">Discover verified rooms in minutes</h1>
-      </div>
-      <div class="search-bar glass">
-        <div>
-          <label class="form-label text-muted" for="universityInput">University</label>
-          <input
-            id="universityInput"
-            class="form-control"
-            type="text"
-            placeholder="FAST-ISB, NUST, or COMSATS"
-          />
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <p class="hero-kicker">Find &amp; Manage Hostels Smarter</p>
+              <h1 class="display-5 fw-bold">Search, compare, and manage hostels all in one place.</h1>
+              <p class="hero-subtext">
+                Discover verified listings, manage bookings, and connect with hostel owners through a single
+                dashboard designed for students.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <button class="btn btn-primary btn-lg px-4">Find a Hostel</button>
+                <button class="btn btn-outline-success btn-lg px-4">List Your Hostel</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="hero-art">
+                <img
+                  src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80"
+                  alt="Students smiling"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-search">
+            <div class="search-pill">
+              <span class="search-label">City / College</span>
+              <select class="form-select form-select-sm border-0">
+                <option>Islamabad</option>
+                <option>Lahore</option>
+                <option>Karachi</option>
+              </select>
+            </div>
+            <div class="search-pill">
+              <span class="search-label">Price Range</span>
+              <select class="form-select form-select-sm border-0">
+                <option>PKR 10k - 20k</option>
+                <option>PKR 20k - 30k</option>
+                <option>PKR 30k - 50k</option>
+              </select>
+            </div>
+            <div class="search-pill">
+              <span class="search-label">Gender</span>
+              <select class="form-select form-select-sm border-0">
+                <option>Any</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <button class="btn btn-success px-4">Search</button>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-icon">🏠</span>
+              <div>
+                <h4>750+</h4>
+                <p>Hostels Listed</p>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">😊</span>
+              <div>
+                <h4>6000+</h4>
+                <p>Happy Students</p>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">🧑‍💼</span>
+              <div>
+                <h4>300+</h4>
+                <p>Hostel Owners</p>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">✅</span>
+              <div>
+                <h4>100%</h4>
+                <p>Verified Listings</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <label class="form-label text-muted" for="distanceRange">Distance (km)</label>
-          <input
-            id="distanceRange"
-            class="form-range"
-            type="range"
-            min="0"
-            max="5"
-            step="0.5"
-            value="2"
-          />
-          <div class="text-muted small">Up to <span id="distanceValue">2</span> km</div>
+      </section>
+    </header>
+
+    <section class="section-soft" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works for Students</h2>
+        <div class="steps">
+          <div class="step-card">
+            <span class="step-icon">📝</span>
+            <h5>Register &amp; Add Hostel</h5>
+            <p>Sign up and submit your preferences to get curated hostel suggestions.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-icon">✅</span>
+            <h5>Get Verified</h5>
+            <p>Each listing goes through an inspection process to ensure safety and quality.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-icon">📆</span>
+            <h5>Book Online</h5>
+            <p>Reserve your room instantly with transparent pricing and flexible terms.</p>
+          </div>
         </div>
-        <button id="searchBtn" class="btn btn-indigo">Search</button>
       </div>
     </section>
 
-    <section class="container py-5">
-      <div class="row g-4" id="hostelResults">
+    <section class="container section" id="featured-hostels">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <h2 class="section-title mb-0">Featured Hostel for Owners</h2>
+        <button class="btn btn-outline-primary">See All Hostels</button>
+      </div>
+      <div class="row g-4">
         <div class="col-md-4">
-          <div class="hostel-card">
-            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Hostel exterior" />
-            <div class="card-body">
+          <article class="hostel-tile">
+            <img
+              src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80"
+              alt="Greenview Hostel"
+            />
+            <div class="hostel-body">
+              <h5>Greenview Hostel</h5>
+              <p>Delhi</p>
               <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Zenith Residences</h5>
-                <span class="badge-verified">Verified</span>
+                <strong>₹ 5,000 / month</strong>
+                <button class="btn btn-sm btn-primary">View Details</button>
               </div>
-              <p class="text-muted mt-2 mb-0">Smart rooms with biometric entry and shared work pods.</p>
             </div>
-            <div class="card-footer">0.8km from FAST-ISB</div>
-          </div>
+          </article>
         </div>
         <div class="col-md-4">
-          <div class="hostel-card">
-            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Interior" />
-            <div class="card-body">
+          <article class="hostel-tile">
+            <img
+              src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"
+              alt="Sunrise PG"
+            />
+            <div class="hostel-body">
+              <h5>Sunrise PG</h5>
+              <p>Bangalore</p>
               <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Aurora House</h5>
-                <span class="badge-verified">Verified</span>
+                <strong>₹ 6,500 / month</strong>
+                <button class="btn btn-sm btn-primary">View Details</button>
               </div>
-              <p class="text-muted mt-2 mb-0">Calm, minimalist rooms with 24/7 security and meals.</p>
             </div>
-            <div class="card-footer">1.4km from NUST</div>
-          </div>
+          </article>
         </div>
         <div class="col-md-4">
-          <div class="hostel-card">
-            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Hostel room" />
-            <div class="card-body">
+          <article class="hostel-tile">
+            <img
+              src="https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=800&q=80"
+              alt="City Stay Hostel"
+            />
+            <div class="hostel-body">
+              <h5>City Stay Hostel</h5>
+              <p>Mumbai</p>
               <div class="d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Nova Suites</h5>
-                <span class="badge-verified">Verified</span>
+                <strong>₹ 4,800 / month</strong>
+                <button class="btn btn-sm btn-primary">View Details</button>
               </div>
-              <p class="text-muted mt-2 mb-0">High-speed WiFi, study lounges, and flexible contracts.</p>
             </div>
-            <div class="card-footer">0.5km from COMSATS</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft">
+      <div class="container">
+        <div class="compare-card">
+          <div>
+            <h2 class="section-title">Compare Hostels Side by Side</h2>
+            <p class="text-muted">
+              Filter by price, amenities, distance, and ratings before committing to your next stay.
+            </p>
+            <button class="btn btn-success px-4">Try Comparison</button>
+          </div>
+          <div class="compare-grid">
+            <div class="compare-item">Price</div>
+            <div class="compare-item">Amenities</div>
+            <div class="compare-item">Distance</div>
+            <div class="compare-item">Rating</div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="container section">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+        <h2 class="section-title mb-0">What Our Users Say</h2>
+        <span class="badge bg-primary-subtle text-primary">4.9 Average Rating</span>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="testimonial">
+            <p>“Found my hostel easily and booked within a day. Super smooth experience.”</p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Rohan S.</strong>
+                <p class="mb-0 text-muted">FAST Islamabad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="testimonial">
+            <p>“The best platform for hostel owners. The dashboard makes operations effortless.”</p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="avatar">PM</div>
+              <div>
+                <strong>Priya M.</strong>
+                <p class="mb-0 text-muted">Owner, Greenview</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <span class="fw-semibold">HFMS</span>
+        <div class="d-flex gap-4 flex-wrap">
+          <a href="#" class="text-decoration-none">About Us</a>
+          <a href="#" class="text-decoration-none">Contact</a>
+          <a href="#" class="text-decoration-none">FAQs</a>
+          <a href="#" class="text-decoration-none">Privacy Policy</a>
+          <a href="#" class="text-decoration-none">Terms</a>
+        </div>
+        <span class="text-muted">265 Rooms Available Today</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

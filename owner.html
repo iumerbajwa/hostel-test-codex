@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Owner Command Center</title>
+    <title>Hostel Owner Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,218 +16,178 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <aside class="sidebar glass">
-      <div>
-        <h5 class="fw-bold">Command Center</h5>
-        <p class="text-muted small">Owner Dashboard</p>
-      </div>
-      <nav class="nav flex-column gap-2">
-        <a class="nav-link active" href="#">Overview</a>
-        <a class="nav-link" href="#">Residents</a>
-        <a class="nav-link" href="#">Finance</a>
-        <a class="nav-link" href="admin.html">Admin Panel</a>
-      </nav>
-      <button class="btn btn-indigo mt-auto" data-bs-toggle="modal" data-bs-target="#manualEntryModal">
-        Manual Entry
-      </button>
-    </aside>
-
-    <main class="main-content">
-      <header class="d-flex justify-content-between align-items-center mb-4">
-        <div>
-          <p class="text-muted mb-1">Welcome back, Owner</p>
-          <h2 class="fw-bold">Live Operations</h2>
-        </div>
-        <div class="glass px-4 py-3 rounded-4">
-          <span class="text-muted small">Live sync:</span>
-          <strong class="ms-2">Connected</strong>
-        </div>
-      </header>
-
-      <section class="bento-grid mb-4">
-        <div class="bento-card stat-card">
-          <span>Total Revenue</span>
-          <h3 class="fw-bold">PKR 8.2M</h3>
-          <small class="text-muted">+12% this month</small>
-        </div>
-        <div class="bento-card stat-card">
-          <span>Pending Tickets</span>
-          <h3 class="fw-bold">14</h3>
-          <small class="text-muted">Maintenance & support</small>
-        </div>
-        <div class="bento-card stat-card">
-          <span>New Applications</span>
-          <h3 class="fw-bold">23</h3>
-          <small class="text-muted">Last 24 hours</small>
-        </div>
-      </section>
-
-      <section class="bento-grid">
-        <div class="bento-card">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h5 class="mb-0">Live Occupancy Grid</h5>
-            <span class="text-muted small">72% occupied</span>
-          </div>
-          <div class="room-grid">
-            <div class="room occupied">A1</div>
-            <div class="room occupied">A2</div>
-            <div class="room">A3</div>
-            <div class="room occupied">A4</div>
-            <div class="room">A5</div>
-            <div class="room occupied">A6</div>
-            <div class="room occupied">B1</div>
-            <div class="room">B2</div>
-            <div class="room occupied">B3</div>
-            <div class="room">B4</div>
-            <div class="room occupied">B5</div>
-            <div class="room">B6</div>
+  <body class="dashboard-body">
+    <div class="dashboard">
+      <aside class="dash-sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">H</div>
+          <div>
+            <h4 class="mb-0">HFMS</h4>
+            <small>Owner</small>
           </div>
         </div>
-
-        <div class="bento-card">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h5 class="mb-0">Hybrid Resident Table</h5>
-            <button class="btn btn-sm btn-indigo">Export</button>
-          </div>
-          <div class="table-responsive">
-            <table class="table align-middle">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Room</th>
-                  <th>Source</th>
-                  <th>Invoice</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Fatima Noor</td>
-                  <td>Suite A4</td>
-                  <td>
-                    <span class="d-inline-flex align-items-center gap-2">
-                      <span class="text-muted">🌐</span> Online
-                    </span>
-                  </td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1001">
-                      Download PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Hamza Aziz</td>
-                  <td>Suite B1</td>
-                  <td>
-                    <span class="d-inline-flex align-items-center gap-2">
-                      <span class="text-muted">👤</span> Manual
-                    </span>
-                  </td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1002">
-                      Download PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Aisha Tariq</td>
-                  <td>Suite A1</td>
-                  <td>
-                    <span class="d-inline-flex align-items-center gap-2">
-                      <span class="text-muted">🌐</span> Online
-                    </span>
-                  </td>
-                  <td>
-                    <button class="btn btn-sm btn-outline-primary download-invoice" data-invoice-id="inv_1003">
-                      Download PDF
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="profile-card">
+          <img
+            src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80"
+            alt="Owner"
+          />
+          <div>
+            <h6 class="mb-0">John Doe</h6>
+            <small>Hostel Owner</small>
           </div>
         </div>
-      </section>
-    </main>
+        <nav class="dash-nav">
+          <a class="active" href="#">Dashboard</a>
+          <a href="#">My Hostels</a>
+          <a href="#">Bookings</a>
+          <a href="#">Tenants</a>
+          <a href="#">Payments</a>
+          <a href="#">Complaints</a>
+          <a href="#">Reports</a>
+          <a href="#">Settings</a>
+          <a href="admin.html">Admin Panel</a>
+        </nav>
+        <button class="btn btn-success w-100">Add New Hostel</button>
+      </aside>
 
-    <div
-      class="modal fade"
-      id="manualEntryModal"
-      tabindex="-1"
-      aria-labelledby="manualEntryModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content glass p-3">
-          <div class="modal-header border-0">
-            <h5 class="modal-title" id="manualEntryModalLabel">Manual Entry Wizard</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <main class="dash-main">
+        <header class="dash-header">
+          <div>
+            <p class="text-muted mb-1">Welcome Back, John!</p>
+            <h2 class="fw-bold">Hostel Owner Dashboard</h2>
+            <p class="text-muted">Search, compare, book hostels &amp; manage your hostel digitally.</p>
           </div>
-          <div class="modal-body">
-            <div class="modal-step active" data-step="1">
-              <h6 class="fw-semibold">Student Details</h6>
-              <div class="row g-3 mt-2">
-                <div class="col-md-6">
-                  <label class="form-label">Full Name</label>
-                  <input class="form-control" type="text" name="fullName" />
+          <div class="header-actions">
+            <button class="btn btn-light">🔔</button>
+            <button class="btn btn-light">💬</button>
+            <div class="avatar-circle">JD</div>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <span>Total</span>
+            <h3>03</h3>
+            <p>Total Hostels Listed</p>
+          </article>
+          <article class="stat-card">
+            <span>Bookings</span>
+            <h3>65</h3>
+            <p>Bookings This Month</p>
+          </article>
+          <article class="stat-card">
+            <span>Total</span>
+            <h3>27</h3>
+            <p>Total Tenants</p>
+          </article>
+          <article class="stat-card">
+            <span>Pending</span>
+            <h3>02</h3>
+            <p>Pending Complaints</p>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Earnings Overview</h5>
+              <button class="btn btn-outline-primary btn-sm">View All Earnings</button>
+            </div>
+            <div class="chart-placeholder">
+              <div class="chart-line"></div>
+              <div class="chart-badge">₹ 2,25,000</div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Recent Bookings</h5>
+              <button class="btn btn-link">View Complaints</button>
+            </div>
+            <div class="list-group list-group-flush">
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Shanth-Foser</h6>
+                  <small class="text-muted">Hostel Destels</small>
                 </div>
-                <div class="col-md-6">
-                  <label class="form-label">Contact</label>
-                  <input class="form-control" type="text" name="contact" />
+                <span class="badge bg-success-subtle text-success">Paid</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">James Smith</h6>
+                  <small class="text-muted">Hostel Destels</small>
                 </div>
-                <div class="col-12">
-                  <label class="form-label">Program</label>
-                  <input class="form-control" type="text" name="program" />
+                <span class="badge bg-warning-subtle text-warning">Pending</span>
+              </div>
+              <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <h6 class="mb-0">Anvelel-Alaz</h6>
+                  <small class="text-muted">Hostel Destels</small>
                 </div>
+                <span class="badge bg-success-subtle text-success">Paid</span>
               </div>
             </div>
-            <div class="modal-step" data-step="2">
-              <h6 class="fw-semibold">Room Assignment</h6>
-              <div class="row g-3 mt-2">
-                <div class="col-md-6">
-                  <label class="form-label">Room</label>
-                  <select class="form-select" name="room">
-                    <option>Suite A3</option>
-                    <option>Suite B2</option>
-                    <option>Suite C1</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Move-in Date</label>
-                  <input class="form-control" type="date" name="moveIn" />
-                </div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Recent Bookings</h5>
+              <button class="btn btn-outline-primary btn-sm">View All Bookings</button>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Student</th>
+                    <th>Room</th>
+                    <th>Check-In</th>
+                    <th>Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ITDustan Johnotus</td>
+                    <td>D1</td>
+                    <td>Jan 15, 2024</td>
+                    <td>₹ 18,400</td>
+                  </tr>
+                  <tr>
+                    <td>Janichandar Wibon</td>
+                    <td>F2</td>
+                    <td>Jan 19, 2024</td>
+                    <td>₹ 15,680</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header">
+              <h5>Pending Complaints</h5>
+              <button class="btn btn-outline-danger btn-sm">Resolve</button>
+            </div>
+            <div class="complaint-card">
+              <p class="mb-1 fw-semibold">Arote Mayon</p>
+              <small class="text-muted">Noise complaint - Room 302</small>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-danger-subtle text-danger">High</span>
+                <button class="btn btn-sm btn-danger">Mark as Done</button>
               </div>
             </div>
-            <div class="modal-step" data-step="3">
-              <h6 class="fw-semibold">Payment Summary</h6>
-              <div class="row g-3 mt-2">
-                <div class="col-md-6">
-                  <label class="form-label">Monthly Rent</label>
-                  <input class="form-control" type="number" name="rent" />
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Deposit</label>
-                  <input class="form-control" type="number" name="deposit" />
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Notes</label>
-                  <textarea class="form-control" name="notes" rows="3"></textarea>
-                </div>
+            <div class="complaint-card">
+              <p class="mb-1 fw-semibold">Pintachan Chatar</p>
+              <small class="text-muted">Maintenance - AC not working</small>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <span class="badge bg-warning-subtle text-warning">Medium</span>
+                <button class="btn btn-sm btn-outline-warning">Assign</button>
               </div>
             </div>
-          </div>
-          <div class="modal-footer border-0 d-flex justify-content-between">
-            <button class="btn btn-outline-secondary" id="prevStep">Back</button>
-            <div class="d-flex gap-2">
-              <button class="btn btn-outline-primary" id="nextStep">Next</button>
-              <button class="btn btn-indigo d-none" id="submitEntry">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="app.js"></script>
   </body>
 </html>
